@@ -545,7 +545,7 @@ func extractEv(body string) string {
 func main() {
 	domainPtr := flag.String("d", "", "Domain to auto-crawl and attack")
 	reqPtr := flag.String("req", "", "Raw HTTP Request file (optional)")
-	proxyPtr := flag.String("proxy", "http://127.0.0.1:8080", "Burp Proxy URL")
+	proxyPtr := flag.String("proxy", "", "Burp Proxy URL (e.g., http://127.0.0.1:8080). Leave blank for direct connection.")
 	concPtr := flag.Int("c", 50, "Concurrency")
 	delayPtr := flag.Duration("delay", 20*time.Millisecond, "Delay")
 	outPtr := flag.String("o", "", "Output JSON file")
